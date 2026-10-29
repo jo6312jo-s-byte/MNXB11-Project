@@ -24,7 +24,7 @@ flowchart TD
     %% Analysis 1 workflow
     G --> G1["macros/analysis1.C <br> include/analysis1.h <br> src/analysis1.cxx"]
     G1 --> G2("Main script <br> (c++)")
-    G2 --> G3("results/analysis1.pdf")
+    G2 --> G3("results/analysis1.root")
 
     %% Analysis 2 workflow
     H --> H1["macros/analysis2.C"]
