@@ -5,7 +5,17 @@
 
 # Changelog (entries from newest to oldest): 
 
-2026-10-25 Joel Johansen  <jo6312jo-s@student.lu.se>
+2026-10-29 Estrella González Gómez <es2670go-s@student.lu.se>
+
+    Simplified and integrated analysis 2 (Old Anaysis 3)
+
+    * Simplified and optimized macros/analysis2.C, removing redundant code and reducing unnecessary operations while preserving the analysis functionality.
+    * Renamed the analysis macro to macros/analysis2.C and updated the output filenames to results/analysis2.pdf and results/analysis2.root to match the analysis numbering and avoid conflicts with other files.
+    * Updated main.cxx to add command-line option 2 for executing Analysis 2.
+    * Implemented the generation of temperature_tree.root before running analysis 2.
+    * Tested the macro independently with ROOT and checked the availability of the input file, shared library, and generated output files.
+    
+2026-10-29 Joel Johansen  <jo6312jo-s@student.lu.se>
 
 	Made macros into translation units. Added report .pdf file. Reformated 
 	source and header files using root-clang. 
