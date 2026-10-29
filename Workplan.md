@@ -24,12 +24,12 @@ flowchart TD
     %% Analysis 1 workflow
     G --> G1["macros/analysis1.C <br> include/analysis1.h <br> src/analysis1.cxx"]
     G1 --> G2("Main script <br> (c++)")
-    G2 --> G3("results/analysis1.root")
+    G2 --> G3("results/analysis1.root <br> results/analysis1.pdf")
 
     %% Analysis 2 workflow
     H --> H1["macros/analysis2.C"]
     H1 --> H2("Main script <br> (c++)")
-    H2 --> H3("results/analysis2.pdf")
+    H2 --> H3("results/analysis2.pdf <br> results/analysis2.root")
 
     %% Analysis 3 workflow
     I --> I1["macros/analysis3.C <br> include/analysis3.h <br> src/analysis3.cxx"]
@@ -39,7 +39,7 @@ flowchart TD
     %% Analysis 4 workflow
     J --> J1["macros/analysis4.C"]
     J1 --> J2("Main script <br> (c++)")
-    J2 --> J3("results/analysis4.pdf")
+    J2 --> J3("results/analysis4.root <br> results/analysis4.pdf")
 
     %% Legend 
     subgraph Legend ["Legend"]
