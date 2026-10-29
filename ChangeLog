@@ -4,6 +4,12 @@
 // Changelog is a summary of a lot of related commits.
 
 # Changelog (entries from newest to oldest): 
+
+2026-10-25 Joel Johansen  <jo6312jo-s@student.lu.se>
+
+	Made macros into translation units. Added report .pdf file. Reformated 
+	source and header files using root-clang. 
+
 2026-10-29 [Maja Solman Wålsten]
 
 - Updated `main.cxx` to include Analysis 4 (previously Analysis 5).
