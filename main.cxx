@@ -1,10 +1,10 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <TROOT.h>
 
 #include "analysis1.h"
 #include "analysis3.h"
+#include "analysis4.h"
 #include "DataExtraction.h"
 #include "Observation.h"
 
@@ -43,11 +43,11 @@ int main(int argc, char* argv[]) {
       tempPerYear(2040);
 
   
-    } else if (std::string(argv[1]) == "4") {
-  std::cout << "Performing analysis 4..." << std::endl;
+  } else if (std::string(argv[1]) == "4") {
+    std::cout << "Performing analysis 4..." << std::endl;
 
-  gROOT->ProcessLine(".x macros/analysis4.C");
-
+    analysis4();
+      
     } else {
       std::cout << "Input must be 1, 2, 3 or 4..." << std::endl;
       std::cout << "Exiting..." << std::endl;
