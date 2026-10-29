@@ -9,6 +9,7 @@
 #include <TLegend.h>
 #include <TSystem.h>
 
+#include "../include/analysis4.h"
 #include "../include/Observation.h"
 
 using namespace std;
@@ -39,12 +40,8 @@ int DayOfYear(int month, int day)
     }
     return doy;
 }
-void Analysis4() {
+void analysis4() {
     //===LOAD FILES AND MEASUREMENTS===
-    if (gSystem->Load("./libObservation.so") < 0){
-        cout << "Could not load libObservation.so" << endl;
-        return;
-    }
     //opens root file and finds tree
     TFile file("temperature_tree.root", "READ");
 
