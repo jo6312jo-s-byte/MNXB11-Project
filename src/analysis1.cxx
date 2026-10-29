@@ -2,6 +2,14 @@
 
 #include <TFile.h>
 #include <TTree.h>
+#include <TH1.h>
+
+// Graph related libraries
+#include <TAxis.h>
+#include <TCanvas.h>
+#include <TGraph.h>
+#include <TGraphAsymmErrors.h>
+
 
 void analysis1(const std::vector<Observation> &observations, Double_t threshold,
                const std::string &root_file) {
@@ -74,4 +82,22 @@ void analysis1(const std::vector<Observation> &observations, Double_t threshold,
   }
 
   tree->AutoSave();
+
+  TFile *file_ = new TFile("results/analysis1.root");
+  TTree *tree_ = (TTree*)file_->Get("analysis1");
+
+  TCanvas *c1 = new TCanvas("c1", "Analysis 1", 800, 600);
+
+  c1->SetGrid();
+
+  tree_->SetMarkerStyle(20);
+  tree_->SetMarkerSize(0.8);
+  tree_->SetMarkerColor(kBlue);
+
+  tree_->Draw("warm_days:year", "", "P");
+
+  tree_->GetHistogram()->SetTitle("Summer days >= 25 C in Lund");
+  tree_->GetHistogram()->GetXaxis()->SetTitle("Year");
+  tree_->GetHistogram()->GetYaxis()->SetTitle("Number of days (June-August)");
+  c1->SaveAs("results/analysis1.pdf");
 }
