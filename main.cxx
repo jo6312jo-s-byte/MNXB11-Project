@@ -32,9 +32,12 @@ int main(int argc, char* argv[]) {
       analysis1(observation_vector, 25.0, "results/analysis1.root");
 
     } else if (std::string(argv[1]) == "2") {
-      std::cout << "Performing analysis 2..." << std::endl;
+    std::cout << "Performing analysis 2..." << std::endl;
 
-      // Analysis 2 code here
+    write_observation(observation_vector, "temperature_tree.root");
+
+    gROOT->ProcessLine(".x macros/analysis2.C");
+    }
 
     } else if (std::string(argv[1]) == "3") {
       std::cout << "Performing analysis 3..." << std::endl;
@@ -52,7 +55,7 @@ int main(int argc, char* argv[]) {
       std::cout << "Input must be 1, 2, 3 or 4..." << std::endl;
       std::cout << "Exiting..." << std::endl;
     }
-  }
+  
 
   return 0;
 }
