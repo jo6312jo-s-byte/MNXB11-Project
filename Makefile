@@ -24,7 +24,7 @@ ObservationDict.cxx: $(HEADERS) include/Linkdef.h
 libObservation.so: ObservationDict.cxx $(SOURCES)
 	$(CXX) -fPIC -shared -o$@ $(CXXFLAGS) -I$(ROOTSYS)/include $^ $(shell root-config --ldflags --libs)
 
-main: main.cxx src/DataExtraction.o src/Observation.o src/analysis1.o ObservationDict.cxx
+main: main.cxx src/DataExtraction.o src/Observation.o src/analysis1.o src/analysis3.o src/analysis4.o ObservationDict.cxx
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
 src/%.o: src/%.cxx
