@@ -27,7 +27,7 @@ flowchart TD
     G2 --> G3("results/analysis1.root <br> results/analysis1.pdf")
 
     %% Analysis 2 workflow
-    H --> H1["macros/analysis2.C"]
+    H --> H1["macros/analysis2.C <br> include/analysis2.h <br> src/analysis2.cxx"]
     H1 --> H2("Main script <br> (c++)")
     H2 --> H3("results/analysis2.pdf <br> results/analysis2.root")
 
@@ -37,7 +37,7 @@ flowchart TD
     I2 --> I3("results/analysis3.root <br> results/deviation_from_average.png <br> results/annual_mean.png")
 
     %% Analysis 4 workflow
-    J --> J1["macros/analysis4.C"]
+    J --> J1["macros/analysis4.C <br> include/analysis4.h <br> src/analysis4.cxx"]
     J1 --> J2("Main script <br> (c++)")
     J2 --> J3("results/analysis4.root <br> results/analysis4.pdf")
 
