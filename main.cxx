@@ -1,12 +1,15 @@
+#include <TROOT.h>
+
 #include <iostream>
 #include <string>
 #include <vector>
-#include <TROOT.h>
 
-#include "analysis1.h"
-#include "analysis3.h"
 #include "DataExtraction.h"
 #include "Observation.h"
+#include "analysis1.h"
+#include "analysis2.h"
+#include "analysis3.h"
+#include "analysis4.h"
 
 int main(int argc, char* argv[]) {
   // Make a vector containing the observation data from the parsed dataset
@@ -32,12 +35,11 @@ int main(int argc, char* argv[]) {
       analysis1(observation_vector, 25.0, "results/analysis1.root");
 
     } else if (std::string(argv[1]) == "2") {
-    std::cout << "Performing analysis 2..." << std::endl;
+      std::cout << "Performing analysis 2..." << std::endl;
 
-    write_observation(observation_vector, "temperature_tree.root");
-
-    gROOT->ProcessLine(".x macros/analysis2.C");
-    }
+      // Analysis 2 code here
+      analysis2();
+      // gROOT->ProcessLine(".x macros/analysis2.C");
 
     } else if (std::string(argv[1]) == "3") {
       std::cout << "Performing analysis 3..." << std::endl;
@@ -45,17 +47,17 @@ int main(int argc, char* argv[]) {
       // temperature prediction for year 2040
       tempPerYear(2040);
 
-  
     } else if (std::string(argv[1]) == "4") {
-  std::cout << "Performing analysis 4..." << std::endl;
+      std::cout << "Performing analysis 4..." << std::endl;
 
-  gROOT->ProcessLine(".x macros/analysis4.C");
+      Analysis4();
+      // gROOT->ProcessLine(".x macros/analysis4.C");
 
     } else {
       std::cout << "Input must be 1, 2, 3 or 4..." << std::endl;
       std::cout << "Exiting..." << std::endl;
     }
-  
+  }
 
   return 0;
 }

@@ -14,6 +14,11 @@
     * Updated main.cxx to add command-line option 2 for executing Analysis 2.
     * Implemented the generation of temperature_tree.root before running analysis 2.
     * Tested the macro independently with ROOT and checked the availability of the input file, shared library, and generated output files.
+    
+2026-10-29 Joel Johansen  <jo6312jo-s@student.lu.se>
+
+	Made macros into translation units. Added report .pdf file. Reformated 
+	source and header files using root-clang. 
 
 2026-10-29 [Maja Solman Wålsten]
 
