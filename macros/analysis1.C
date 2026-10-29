@@ -3,7 +3,7 @@ void analysis1()
     TFile *file = new TFile("results/analysis1.root");
     TTree *tree = (TTree*)file->Get("analysis1");
 
-    TCanvas *c1 = new TCanvas("c1", "Analysis 2", 800, 600);
+    TCanvas *c1 = new TCanvas("c1", "Analysis 1", 800, 600);
 
     c1->SetGrid();
 
