@@ -34,7 +34,7 @@ flowchart TD
     %% Analysis 3 workflow
     I --> I1["macros/analysis3.C"]
     I1 --> I2("Main script <br> (c++)")
-    I2 --> I3("results/analysis3.root <br> "results/deviation_from_average.png <br> results/annual_mean.png ")
+    I2 --> I3("results/analysis3.root <br> "results/deviation_from_average.png <br> results/annual_mean.png")
 
     %% Analysis 4 workflow
     J --> J1["macros/analysis4.C"]
