@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <TROOT.h>
 
 #include "analysis1.h"
 #include "analysis3.h"
@@ -41,10 +42,11 @@ int main(int argc, char* argv[]) {
       // temperature prediction for year 2040
       tempPerYear(2040);
 
+  
     } else if (std::string(argv[1]) == "4") {
-      std::cout << "Performing analysis 4..." << std::endl;
+  std::cout << "Performing analysis 4..." << std::endl;
 
-      // Analysis 4 code here
+  gROOT->ProcessLine(".x macros/analysis4.C");
 
     } else {
       std::cout << "Input must be 1, 2, 3 or 4..." << std::endl;
