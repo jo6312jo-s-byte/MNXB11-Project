@@ -2,8 +2,8 @@
 #include <string>
 #include <vector>
 
-#include "Analysis2.h"
-#include "Analysis3.h"
+#include "analysis1.h"
+#include "analysis3.h"
 #include "DataExtraction.h"
 #include "Observation.h"
 
@@ -28,7 +28,7 @@ int main(int argc, char* argv[]) {
 
       // Analysis 1 code here
       // Run analysis 2 using a temperature threshold of 25 degrees
-      analysis2(observation_vector, 25.0, "Analysis2.root");
+      analysis1(observation_vector, 25.0, "results/analysis1.root");
 
     } else if (std::string(argv[1]) == "2") {
       std::cout << "Performing analysis 2..." << std::endl;

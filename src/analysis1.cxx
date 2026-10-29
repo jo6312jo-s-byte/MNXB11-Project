@@ -1,9 +1,9 @@
-#include "Analysis2.h"
+#include "analysis1.h"
 
 #include <TFile.h>
 #include <TTree.h>
 
-void analysis2(const std::vector<Observation> &observations,
+void analysis1(const std::vector<Observation> &observations,
                Double_t threshold,
                const std::string &root_file) {
 
@@ -15,7 +15,7 @@ void analysis2(const std::vector<Observation> &observations,
     Int_t summer_days{};
 
     // Create tree for the analysis result
-    TTree *tree = new TTree("analysis2", "Number of warm summer days per year");
+    TTree *tree = new TTree("analysis1", "Number of warm summer days per year");
 
     tree->Branch("year", &year);
     tree->Branch("warm_days", &warm_days);
