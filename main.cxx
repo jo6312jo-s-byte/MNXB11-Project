@@ -5,6 +5,8 @@
 
 #include "analysis1.h"
 #include "analysis3.h"
+#include "analysis4.h"
+
 #include "DataExtraction.h"
 #include "Observation.h"
 
@@ -32,12 +34,9 @@ int main(int argc, char* argv[]) {
       analysis1(observation_vector, 25.0, "results/analysis1.root");
 
     } else if (std::string(argv[1]) == "2") {
-    std::cout << "Performing analysis 2..." << std::endl;
+      std::cout << "Performing analysis 2..." << std::endl;
 
-    write_observation(observation_vector, "temperature_tree.root");
-
-    gROOT->ProcessLine(".x macros/analysis2.C");
-    }
+      // Analysis 2 code here
 
     } else if (std::string(argv[1]) == "3") {
       std::cout << "Performing analysis 3..." << std::endl;
@@ -47,15 +46,16 @@ int main(int argc, char* argv[]) {
 
   
     } else if (std::string(argv[1]) == "4") {
-  std::cout << "Performing analysis 4..." << std::endl;
+      std::cout << "Performing analysis 4..." << std::endl;
 
-  gROOT->ProcessLine(".x macros/analysis4.C");
+      Analysis4();
+      //gROOT->ProcessLine(".x macros/analysis4.C");
 
     } else {
       std::cout << "Input must be 1, 2, 3 or 4..." << std::endl;
       std::cout << "Exiting..." << std::endl;
     }
-  
+  }
 
   return 0;
 }
