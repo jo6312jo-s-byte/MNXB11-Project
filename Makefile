@@ -24,11 +24,14 @@ ObservationDict.cxx: $(HEADERS) include/Linkdef.h
 libObservation.so: ObservationDict.cxx $(SOURCES)
 	$(CXX) -fPIC -shared -o$@ $(CXXFLAGS) -I$(ROOTSYS)/include $^ $(shell root-config --ldflags --libs)
 
-main: main.cxx src/DataExtraction.o src/Observation.o src/analysis1.o ObservationDict.cxx
+main: main.cxx src/DataExtraction.o src/Observation.o src/analysis1.o macros/analysis4.o ObservationDict.cxx
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
 src/%.o: src/%.cxx
 	$(CXX) $(CXXFLAGS) $^ -c -o $@
+
+macros/%.o: macros/%.C
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -v src/*.o datasets/*.csv datasets/*.dat datasets/*.txt libObservation.so ObservationDict.cxx ObservationDict_rdict.pcm temperature_tree.root main
