@@ -1,15 +1,15 @@
 #pragma once
 
+#include <TCanvas.h>
+#include <TFile.h>
+#include <TH1I.h>
+#include <TLegend.h>
+#include <TSystem.h>
+#include <TTree.h>
+
 #include <iostream>
 #include <map>
 #include <utility>
-
-#include <TFile.h>
-#include <TTree.h>
-#include <TH1I.h>
-#include <TCanvas.h>
-#include <TLegend.h>
-#include <TSystem.h>
 
 #include "Observation.h"
 

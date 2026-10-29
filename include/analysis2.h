@@ -2,8 +2,9 @@
 
 // Root libraries
 #include <TFile.h>
-#include <TTree.h>
 #include <TSystem.h>
+#include <TTree.h>
+
 #include <iostream>
 
 // Date related libraries
@@ -17,8 +18,8 @@
 #include "Observation.h"
 
 // Graph related libraries
-#include <TCanvas.h>
 #include <TAxis.h>
+#include <TCanvas.h>
 #include <TGraph.h>
 #include <TGraphAsymmErrors.h>
 
