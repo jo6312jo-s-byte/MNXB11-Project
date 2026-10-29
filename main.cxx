@@ -4,6 +4,7 @@
 #include <TROOT.h>
 
 #include "analysis1.h"
+#include "analysis2.h"
 #include "analysis3.h"
 #include "analysis4.h"
 
@@ -37,6 +38,8 @@ int main(int argc, char* argv[]) {
       std::cout << "Performing analysis 2..." << std::endl;
 
       // Analysis 2 code here
+      analysis2();
+      //gROOT->ProcessLine(".x macros/analysis2.C");
 
     } else if (std::string(argv[1]) == "3") {
       std::cout << "Performing analysis 3..." << std::endl;
