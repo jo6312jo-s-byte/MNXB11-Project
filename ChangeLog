@@ -18,7 +18,8 @@
 2026-10-29 Joel Johansen  <jo6312jo-s@student.lu.se>
 
 	Made macros into translation units. Added report .pdf file. Reformated 
-	source and header files using root-clang. 
+	source and header files using root-clang. There is currently a bug where some of the plots 
+	are missing data points. 
 
 2026-10-29 [Maja Solman Wålsten]
 
