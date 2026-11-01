@@ -21,23 +21,20 @@ echo "Parsing dataset for Lund..."
 skip_rows=27
 
 # Parse data using awk with delimiter ;
-awk -F';' 'NR > $skip_rows {
+# Only include data that is controlled
+awk -F';' '$4 == "G" {
 
-    # Only include data that is controlled
-    if ($4 == "G") {
+    # Split date into year, month and day and store in 
+    # an array called date
+    split($1, date, "-")
 
-        # Split date into year, month and day and store in 
-        # an array called date
-        split($1, date, "-")
+    # Split time into hour, minute and second and store in 
+    # an array called time. Only the hour will be used
+    split($2, time, ":")
 
-        # Split time into hour, minute and second and store in 
-        # an array called time. Only the hour will be used
-        split($2, time, ":")
-
-        # Print formated data to stdout
-        printf("%i,%i,%i,%i,%0.1f\n", date[1], date[2], date[3], time[1], $3)
-
-    }
+    # Print formated data to stdout
+    printf("%i,%i,%i,%i,%0.1f\n", date[1], date[2], date[3], time[1], $3)
+    
 }' $raw_data_path >> $parsed_data_path
 
 echo "Done" 
