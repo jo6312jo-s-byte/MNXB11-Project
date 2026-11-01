@@ -5,6 +5,12 @@
 
 # Changelog (entries from newest to oldest): 
 
+2026-11-01 Joel Johansen  <jo6312jo-s@student.lu.se>
+
+	Fixed the missing data points bug
+
+	* Fixed the parsedata.sh script which previously ignored some entries from the raw data file
+
 2026-10-29 Estrella González Gómez <es2670go-s@student.lu.se>
 
     Simplified and integrated analysis 2 (Old Anaysis 3)
